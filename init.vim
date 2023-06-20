@@ -86,7 +86,6 @@ colorscheme catppuccin_mocha
 nnoremap <Tab> :BufferLineCycleNext<CR>
 nnoremap <S-Tab> :BufferLineCyclePrev<CR>
 
-
 " Set the Leader key to '\' (backslash)
 let mapleader = "\<Space>"
 
