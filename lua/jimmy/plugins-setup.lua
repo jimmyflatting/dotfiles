@@ -31,7 +31,8 @@ return packer.startup(function(use)
   
   use("wbthomason/packer.nvim") -- Packer
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
-  use({ "catppuccin/nvim", as = "catppuccin" })
+  -- use({ "catppuccin/nvim", as = "catppuccin" })
+  use({"ellisonleao/gruvbox.nvim"}) -- Gruvbox
   use("nvim-treesitter/nvim-treesitter") -- Treesitter
   use("christoomey/vim-tmux-navigator") -- Navigation between splits
   use("szw/vim-maximizer") -- maximize & restore current window
@@ -48,7 +49,21 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes etc.
   use("windwp/nvim-ts-autotag") -- autoclose tags
   use({"neoclide/coc.nvim", branch = 'release'})
-  use("prettier/vim-prettier")
+  use("prettier/vim-prettier") -- prettier
+  use("github/copilot.vim") -- copilot
+
+  use("glepnir/galaxyline.nvim") -- statusline
+  use("luochen1990/rainbow") -- rainbow brackets
+  use {'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use("hrsh7th/nvim-compe") -- autocompletion
+  use("hrsh7th/vim-vsnip") -- snippets
+  use("hrsh7th/cmp-nvim-lsp") -- nvim lsp
+  use("hrsh7th/cmp-buffer") -- buffer
+  use("hrsh7th/cmp-path") -- path
+  use("hrsh7th/cmp-cmdline") -- cmdline
+  use("hrsh7th/nvim-cmp") -- cmp
 
   if packer_bootstrap then
     require("packer").sync()
