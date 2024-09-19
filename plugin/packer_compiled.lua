@@ -79,36 +79,6 @@ _G.packer_plugins = {
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ReplaceWithRegister = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
-    url = "https://github.com/vim-scripts/ReplaceWithRegister"
-  },
-  ["cmp-buffer"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
-  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -119,30 +89,40 @@ _G.packer_plugins = {
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
     url = "https://github.com/glepnir/galaxyline.nvim"
   },
-  ["gruvbox.nvim"] = {
+  gruvbox = {
     loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  ["lualine.nvim"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-cmp"] = {
+  ["nvim-lsp-installer"] = {
     loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
-  ["nvim-compe"] = {
+  ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-compe",
-    url = "https://github.com/hrsh7th/nvim-compe"
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-scrollbar"] = {
+    loaded = true,
+    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
+    url = "https://github.com/petertriho/nvim-scrollbar"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -199,20 +179,10 @@ _G.packer_plugins = {
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
   },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/Users/jimmy/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 

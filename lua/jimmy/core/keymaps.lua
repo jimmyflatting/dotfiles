@@ -25,8 +25,8 @@ keymap.set("n", "<leader>v", '"+p')
 keymap.set("n", "x", '"_x') -- Dont copy cut text
 
 -- Window splits
-keymap.set("n", "<leader>s", "<C-w>v") -- Split vertically
-keymap.set("n", "<leader>d", ":split<CR>:term<CR>") -- Split horizontally
+keymap.set("n", "<leader>d", "<C-w>v") -- Split vertically
+keymap.set("n", "<leader>s", ":split<CR>:term<CR>") -- Split horizontally
 keymap.set("n", "<leader>x", ":close<CR>") -- Close current split window
 keymap.set("n", "<leader>z", "<C-w>=") -- Make split window 50/50
 
@@ -49,5 +49,5 @@ keymap.set("n", "<leader><Down>", ":TmuxNavigateDown<CR>")
 keymap.set("n", "<leader>f", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 
--- CoC
-keymap.set('i', '<CR>', 'pumvisible() ? coc#_select_confirm() : "<CR>"', { expr = true, silent = true })
+-- Save and run Makefile
+keymap.set("n", "<leader>b", ":w<CR>:make<CR>")

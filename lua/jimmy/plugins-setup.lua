@@ -29,41 +29,41 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
   
+  -- General plugins
   use("wbthomason/packer.nvim") -- Packer
+  use ("williamboman/mason.nvim") -- Mason
+  use("williamboman/mason-lspconfig.nvim") -- Mason LSP
+  use("neovim/nvim-lspconfig") -- LSP Config
+  use("williamboman/nvim-lsp-installer") -- LSP Installer
+  use("petertriho/nvim-scrollbar") -- Scrollbar
+  use("prettier/vim-prettier") -- Prettier
+  use("github/copilot.vim") -- CoPilot
+  
+  -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
-  -- use({ "catppuccin/nvim", as = "catppuccin" })
-  use({"ellisonleao/gruvbox.nvim"}) -- Gruvbox
+  use({"ellisonleao/gruvbox.nvim", as = "gruvbox" }) -- Gruvbox
   use("nvim-treesitter/nvim-treesitter") -- Treesitter
   use("christoomey/vim-tmux-navigator") -- Navigation between splits
   use("szw/vim-maximizer") -- maximize & restore current window
-  
-  use("tpope/vim-surround")
-  use("vim-scripts/ReplaceWithRegister")
-  
   use("numToStr/Comment.nvim") -- Comment plugin
   use("nvim-tree/nvim-tree.lua") -- Filetree
   use("nvim-tree/nvim-web-devicons") -- Dev icons
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fuzzy finder dependancy
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
-  
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes etc.
   use("windwp/nvim-ts-autotag") -- autoclose tags
-  use({"neoclide/coc.nvim", branch = 'release'})
-  use("prettier/vim-prettier") -- prettier
-  use("github/copilot.vim") -- copilot
-
-  use("glepnir/galaxyline.nvim") -- statusline
+  -- use({"NTBBloodbath/galaxyline.nvim",
+  --  config = function() 
+  --    require("galaxyline.themes.eviline") 
+  --  end,
+  --  requires = {"kyazdani42/nvim-web-devicons", opt = true 
+  --  }}) -- statusline
+  use({
+    'glepnir/galaxyline.nvim',
+    branch = 'main',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  }) -- statusline
   use("luochen1990/rainbow") -- rainbow brackets
-  use {'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use("hrsh7th/nvim-compe") -- autocompletion
-  use("hrsh7th/vim-vsnip") -- snippets
-  use("hrsh7th/cmp-nvim-lsp") -- nvim lsp
-  use("hrsh7th/cmp-buffer") -- buffer
-  use("hrsh7th/cmp-path") -- path
-  use("hrsh7th/cmp-cmdline") -- cmdline
-  use("hrsh7th/nvim-cmp") -- cmp
 
   if packer_bootstrap then
     require("packer").sync()
