@@ -8,7 +8,7 @@ require('mason').setup({
   }
 })
 require('mason-lspconfig').setup({
-  ensure_installed = { 'clangd' }
+  ensure_installed = { 'clangd', 'pyright', 'intelephense', 'ts_ls', 'lua_ls', 'emmet_ls' },
 })
 require('mason-lspconfig').setup_handlers({
   function(server)

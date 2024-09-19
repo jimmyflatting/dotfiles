@@ -60,6 +60,8 @@ return packer.startup(function(use)
     requires = { 'rafamadriz/friendly-snippets' }
   } -- Snippets
   use("hrsh7th/nvim-cmp") -- Completion
+  use("saadparwaiz1/cmp_luasnip") -- Snippets for completion
+  use("hrsh7th/cmp-nvim-lsp") -- LSP for completion
 
   -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
