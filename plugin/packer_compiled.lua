@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/jimmyflatting/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["eagle.nvim"] = {
+    loaded = true,
+    path = "/Users/jimmyflatting/.local/share/nvim/site/pack/packer/start/eagle.nvim",
+    url = "https://github.com/soulis-1256/eagle.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/jimmyflatting/.local/share/nvim/site/pack/packer/start/friendly-snippets",

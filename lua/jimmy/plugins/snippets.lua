@@ -83,3 +83,11 @@ local cmp = require'cmp'
   require('lspconfig')['lua_ls'].setup {
     capabilities = capabilities
   }
+
+  -- Set explaination on hover
+  require("eagle").setup({
+  -- override the default values found in config.lua
+  })
+
+  -- make sure mousemoveevent is enabled
+  vim.o.mousemoveevent = true

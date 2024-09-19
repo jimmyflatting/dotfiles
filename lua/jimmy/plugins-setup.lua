@@ -62,6 +62,7 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- Completion
   use("saadparwaiz1/cmp_luasnip") -- Snippets for completion
   use("hrsh7th/cmp-nvim-lsp") -- LSP for completion
+  use("soulis-1256/eagle.nvim") -- Hover for completion
 
   -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
