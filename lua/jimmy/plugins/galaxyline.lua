@@ -1,3 +1,5 @@
+require('galaxyline').short_line_list = { 'NvimTree', 'vista', 'dbui', 'packer' }
+
 require("galaxyline").section.left[1] = {
   FileSize = {
     provider = "FileSize",
@@ -27,7 +29,7 @@ require("galaxyline").section.right[2] = {
     provider = "GitBranch",
     condition = require("galaxyline.condition").checkwidth,
     separator = " | ",
-    highlight = { "#ebdbb2", "#282828" },
+    highlight = { "#282828", "#ebdbb2" },
     seprarator_highlight = { "#282828", "#282828" },
   },
 }
