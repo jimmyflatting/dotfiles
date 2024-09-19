@@ -46,7 +46,7 @@ keymap.set("n", "<leader><Up>", ":TmuxNavigateUp<CR>")
 keymap.set("n", "<leader><Down>", ":TmuxNavigateDown<CR>")
 
 -- telescope
-keymap.set("n", "<leader>f", "<cmd>Telescope live_grep<CR>")
+keymap.set('n', '<leader>f', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 
 -- Save and run Makefile

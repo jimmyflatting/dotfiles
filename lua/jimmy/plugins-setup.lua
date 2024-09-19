@@ -38,6 +38,23 @@ return packer.startup(function(use)
   use("petertriho/nvim-scrollbar") -- Scrollbar
   use("prettier/vim-prettier") -- Prettier
   use("github/copilot.vim") -- CoPilot
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    config = function()
+      local telescope = require("telescope")
+
+      -- first setup telescope
+      telescope.setup({
+        -- your config
+      })
+
+      -- then load the extension
+      telescope.load_extension("live_grep_args")
+    end
+}
   
   -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
@@ -48,16 +65,8 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim") -- Comment plugin
   use("nvim-tree/nvim-tree.lua") -- Filetree
   use("nvim-tree/nvim-web-devicons") -- Dev icons
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fuzzy finder dependancy
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes etc.
   use("windwp/nvim-ts-autotag") -- autoclose tags
-  -- use({"NTBBloodbath/galaxyline.nvim",
-  --  config = function() 
-  --    require("galaxyline.themes.eviline") 
-  --  end,
-  --  requires = {"kyazdani42/nvim-web-devicons", opt = true 
-  --  }}) -- statusline
   use({
     'glepnir/galaxyline.nvim',
     branch = 'main',
