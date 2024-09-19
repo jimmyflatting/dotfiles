@@ -7,9 +7,17 @@ require('mason').setup({
     },
   }
 })
-require('mason-lspconfig').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = { 'clangd' }
+})
 require('mason-lspconfig').setup_handlers({
   function(server)
     lspconfig[server].setup({})
   end,
 })
+
+lspconfig.clangd.setup {
+    cmd = { "clangd", "--compile-commands-dir=." },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = lspconfig.util.root_pattern("compile_commands.json", ".clangd", ".git"),
+}

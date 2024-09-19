@@ -54,8 +54,13 @@ return packer.startup(function(use)
       -- then load the extension
       telescope.load_extension("live_grep_args")
     end
-}
-  
+  }
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = { 'rafamadriz/friendly-snippets' }
+  } -- Snippets
+  use("hrsh7th/nvim-cmp") -- Completion
+
   -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
   use({"ellisonleao/gruvbox.nvim", as = "gruvbox" }) -- Gruvbox
