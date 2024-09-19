@@ -2,19 +2,11 @@ require("galaxyline").section.left[1] = {
   FileSize = {
     provider = "FileSize",
     condition = require("galaxyline.condition").checkwidth,
-    separator = " ",
+    separator = "|",
   },
 }
 
 require("galaxyline").section.left[2] = {
-  FileIcon = {
-    provider = "FileIcon",
-    condition = require("galaxyline.condition").checkwidth,
-    separator = " ",
-  },
-}
-
-require("galaxyline").section.left[3] = {
   FilePath = {
     provider = "FilePath",
     condition = require("galaxyline.condition").checkwidth,
@@ -34,7 +26,7 @@ require("galaxyline").section.right[2] = {
   GitWorkspace = {
     provider = "GitBranch",
     condition = require("galaxyline.condition").checkwidth,
-    separator = " ",
+    separator = " | ",
     highlight = { "#ebdbb2", "#282828" },
     seprarator_highlight = { "#282828", "#282828" },
   },
