@@ -21,3 +21,15 @@ lspconfig.clangd.setup {
     filetypes = { "c", "cpp", "objc", "objcpp" },
     root_dir = lspconfig.util.root_pattern("compile_commands.json", ".clangd", ".git"),
 }
+
+require('lspconfig').intelephense.setup({
+on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    intelephense = {
+      environment = {
+        includePaths = {"./stubs/php-stubs"}
+      }
+    }
+  }
+})
