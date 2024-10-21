@@ -50,4 +50,4 @@ keymap.set('n', '<leader>f', require("telescope").extensions.live_grep_args.live
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 
 -- Save and run Makefile
-keymap.set("n", "<leader>b", ":w<CR>:make<CR>")
+keymap.set("n", "<leader>b", ":w<CR>:!./compile.sh<CR>")
