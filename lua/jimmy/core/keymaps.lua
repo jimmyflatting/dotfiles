@@ -2,21 +2,27 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
--- general keymaps
-keymap.set("i", "<C-Left>", "v:lua.mark_line('start')", { expr = true })
-keymap.set("i", "<C-Right>", "v:lua.mark_line('end')", { expr = true })
-keymap.set("n", "<C-Left>", "v:lua.mark_line('start')", { expr = true })
-keymap.set("n", "<C-Right>", "v:lua.mark_line('end')", { expr = true })
+-- Shift + arrow keys to select text
+keymap.set('i', '<S-Up>', '<Esc>v<Up>i', { noremap = true, silent = true })
+keymap.set('i', '<S-Down>', '<Esc>v<Down>i', { noremap = true, silent = true })
+keymap.set('i', '<S-Left>', '<Esc>v<Left>i', { noremap = true, silent = true })
+keymap.set('i', '<S-Right>', '<Esc>v<Right>i', { noremap = true, silent = true })
+keymap.set('n', '<S-Up>', 'v<Up>', { noremap = true, silent = true })
+keymap.set('n', '<S-Down>', 'v<Down>', { noremap = true, silent = true })
+keymap.set('n', '<S-Left>', 'v<Left>', { noremap = true, silent = true })
+keymap.set('n', '<S-Right>', 'v<Right>', { noremap = true, silent = true })
+keymap.set('v', '<S-Up>', '<Up>', { noremap = true, silent = true })
+keymap.set('v', '<S-Down>', '<Down>', { noremap = true, silent = true })
+keymap.set('v', '<S-Left>', '<Left>', { noremap = true, silent = true })
+keymap.set('v', '<S-Right>', '<Right>', { noremap = true, silent = true })
 
-keymap.set("i", "<S-Left>", "v:lua.mark_line('left')", { expr = true })
-keymap.set("i", "<S-Right>", "v:lua.mark_line('right')", { expr = true })
-keymap.set("n", "<S-Left>", "v:lua.mark_line('left')", { expr = true })
-keymap.set("n", "<S-Right>", "v:lua.mark_line('right')", { expr = true })
-
-keymap.set("i", "<S-Up>", "v:lua.mark_line('up')", { expr = true })
-keymap.set("n", "<S-Up>", "v:lua.mark_line('up')", { expr = true })
-keymap.set("i", "<S-Down>", "v:lua.mark_line('down')", { expr = true })
-keymap.set("n", "<S-Down>", "v:lua.mark_line('down')", { expr = true })
+-- Option (Alt) + Up/Down to move text
+keymap.set('i', '<A-Up>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+keymap.set('i', '<A-Down>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
+keymap.set('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
+keymap.set('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
+keymap.set('v', '<A-Up>', ':m \'<-2<CR>gv=gv', { noremap = true, silent = true })
+keymap.set('v', '<A-Down>', ':m \'>+1<CR>gv=gv', { noremap = true, silent = true })
 
 keymap.set("n", "<leader>a", "ggVG")
 keymap.set("n", "<leader>c", '"*y')
@@ -51,3 +57,7 @@ keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 
 -- Save and run Makefile
 keymap.set("n", "<leader>b", ":w<CR>:!./compile.sh<CR>")
+
+-- Save and close file
+keymap.set("n", "<leader>w", ":w!<CR>")
+keymap.set("n", "<leader>q", ":q<CR>")
