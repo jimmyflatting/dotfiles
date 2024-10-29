@@ -67,6 +67,7 @@ return packer.startup(function(use)
   -- Theme & UI
   use("nvim-lua/plenary.nvim") -- Dependancy for many plugins
   use({"ellisonleao/gruvbox.nvim", as = "gruvbox" }) -- Gruvbox
+  use { "catppuccin/nvim", as = "catppuccin" } -- Catppuccino
   use("nvim-treesitter/nvim-treesitter") -- Treesitter
   use("christoomey/vim-tmux-navigator") -- Navigation between splits
   use("szw/vim-maximizer") -- maximize & restore current window
@@ -75,13 +76,11 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-web-devicons") -- Dev icons
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes etc.
   use("windwp/nvim-ts-autotag") -- autoclose tags
-  use({
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-  }) -- statusline
   use("luochen1990/rainbow") -- rainbow brackets
-
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} -- bufferline
+  use {'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  } -- statusline
   if packer_bootstrap then
     require("packer").sync()
   end

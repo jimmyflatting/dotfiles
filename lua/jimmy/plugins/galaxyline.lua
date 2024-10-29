@@ -1,35 +1,40 @@
-require('galaxyline').short_line_list = { 'NvimTree', 'vista', 'dbui', 'packer' }
-
-require("galaxyline").section.left[1] = {
-  FileSize = {
-    provider = "FileSize",
-    condition = require("galaxyline.condition").checkwidth,
-    separator = "|",
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
   },
-}
-
-require("galaxyline").section.left[2] = {
-  FilePath = {
-    provider = "FilePath",
-    condition = require("galaxyline.condition").checkwidth,
-    separator = " ",
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
   },
-}
-
-require("galaxyline").section.right[1] = {
-  LSPClient = {
-    provider = "GetLspClient",
-    condition = require("galaxyline.condition").checkwidth,
-    separator = " ",
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
   },
-}
-
-require("galaxyline").section.right[2] = {
-  GitWorkspace = {
-    provider = "GitBranch",
-    condition = require("galaxyline.condition").checkwidth,
-    separator = " | ",
-    highlight = { "#282828", "#ebdbb2" },
-    seprarator_highlight = { "#282828", "#282828" },
-  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
 }
