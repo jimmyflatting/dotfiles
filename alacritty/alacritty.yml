@@ -1,0 +1,37 @@
+general:
+  live_config_reload: true
+
+window:
+  title: Terminal
+  dynamic_title: false
+  
+  padding:
+    x: 4
+    y: 4
+
+  opacity: 0.8
+
+font:
+  normal:
+    family: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Medium
+
+  italic:
+    family: monospace
+    style: "Light Italic"
+
+  size: 14.0
+
+key_bindings:
+  - { key: C, mods: Control, action: Copy }
+  - { key: V, mods: Control, action: Paste }
+
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Beam
