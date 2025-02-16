@@ -23,6 +23,9 @@ font pango:Meslo Nerd Font 12
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# wallpaper / solid color
+exec --no-startup-id xsetroot -solid "#282828"
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -192,11 +195,12 @@ bar {
                 statusline $yellow
                 # workspaces section            
                 #                    border  backgr. text
-                focused_workspace    $aqua $aqua $darkgray
+                focused_workspace    $darkgray $darkgray $yellow
                 inactive_workspace   $darkgray $darkgray $yellow
                 active_workspace     $darkgray $darkgray $yellow
                 urgent_workspace     $red $red $bg
         }
+
 }
 
 #######
@@ -230,7 +234,7 @@ set $darkgray #1d2021
 
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused          $darkgray $darkgray $yellow $purple $darkgray
 client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red

@@ -124,3 +124,11 @@ export PS1="\u@\h | \W \$(parse_git_branch)\n→ "
 # aliases for kubectl
 alias kuse="kubectl config use-context"
 alias klist="kubectl config get-contexts"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+alias docker-desktop="systemctl --user start docker-desktop"

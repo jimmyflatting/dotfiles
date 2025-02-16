@@ -49,4 +49,3 @@ function mark_line(direction)
         vim.cmd('normal! m+')
     end
 end
-
